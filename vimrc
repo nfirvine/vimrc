@@ -45,15 +45,24 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'joeytwiddle/sexy_scroller.vim'
-Bundle 'scrooloose/syntastic.git'
-Bundle 'davidhalter/jedi-vim'
+"Bundle 'joeytwiddle/sexy_scroller.vim'
+"Bundle 'scrooloose/syntastic.git'
+"Bundle 'davidhalter/jedi-vim'
+"Bundle 'Valloric/YouCompleteMe'
+Bundle 'xolox/vim-misc'
+Bundle 'xolox/vim-session'
+Bundle 'klen/python-mode.git'
 
 Bundle 'fholgado/minibufexpl.vim'
 
 map <Leader>e :MBEOpen<cr>
 map <Leader>c :MBEClose<cr>
 map <Leader>t :MBEToggle<cr>
+
+let vimrclocal = expand("~/.vimrc.local")
+if filereadable( vimrclocal)
+    execute "source " . vimrclocal
+endif
 
 
 
